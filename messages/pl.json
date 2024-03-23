@@ -1,5 +1,16 @@
 {
-  "Index": {
-    "title": "Czesc swiat!"
+  "Home": {
+    "Hero": {
+      "weCanHelp": "Możemy pomóc Ci",
+      "you": "w",
+      "yourWebsite": "Twojej strony internetowej",
+        "description": "Odblokuj pełny potencjał swojej obecności online dzięki profesjonalnemu tworzeniu stron internetowych. Nasz zespół wykwalifikowanych programistów będzie współpracować z Tobą, aby stworzyć spersonalizowaną stronę internetową dopasowaną do unikalnych potrzeb Twojego biznesu. Od projektowania po uruchomienie, będziemy prowadzić Cię na każdym etapie, aby zapewnić, że Twoja strona nie tylko świetnie wygląda, ale także działa perfekcyjnie. Podjęcie pierwszego kroku w kierunku udanej obecności online jest możliwe już dziś - skontaktuj się z nami, aby rozpocząć budowę swojej wymarzonej strony internetowej!",
+      "word_carousel": {
+        "grow": "rozwinąć",
+        "build": "zbudować",
+        "host": "hostingowac",
+        "maintain": "utrzymać"
+      }
+    }
   }
 }

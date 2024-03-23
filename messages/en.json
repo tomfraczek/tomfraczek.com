@@ -1,5 +1,16 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "Home": {
+    "Hero": {
+      "weCanHelp": "We can help",
+      "you": "you",
+      "yourWebsite": "your website",
+      "description": "Unlock the full potential of your online presence with expert website development. Our team of skilled developers will work with you to create a custom website tailored to your business' unique needs. From design to launch, we'll guide you every step of the way to ensure that your website not only looks great but also functions perfectly. Take the first step towards a successful online presence today and contact us to start building your dream website!",
+      "word_carousel": {
+        "grow": "grow",
+        "build": "build",
+        "host": "host",
+        "maintain": "maintain"
+      }
+    }
   }
 }
