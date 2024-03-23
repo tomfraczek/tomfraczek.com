@@ -1,3 +1,10 @@
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+  weight: ['400', '700'],
+  preload: false,
+});
+
 export default function LocaleLayout({
   children,
   params: { locale },
@@ -7,7 +14,7 @@ export default function LocaleLayout({
 }) {
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }
