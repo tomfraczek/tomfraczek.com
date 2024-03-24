@@ -1,5 +1,7 @@
 import { Roboto } from 'next/font/google';
 import { Header } from '@/app/components/header';
+import { HamburgerMenuProvider } from '@/app/context';
+import StyledComponentsRegistry from '@/lib/registry';
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -16,8 +18,12 @@ export default function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={roboto.className}>
-        <Header />
-        {children}
+        <HamburgerMenuProvider>
+          <StyledComponentsRegistry>
+            <Header />
+            {children}
+          </StyledComponentsRegistry>
+        </HamburgerMenuProvider>
       </body>
     </html>
   );
