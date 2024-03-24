@@ -2,7 +2,7 @@
 import { HamburgerButton } from '@/app/components/hamburgerButton/hamburgerButton';
 import { AppContext } from '@/app/context';
 import { motion } from 'framer-motion';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { RefObject, useContext, useEffect, useRef, useState } from 'react';
 import { MainLogo } from '@/app/components/mainLogo';
 import { MAIN_NAVIGATION } from '@/app/global/menuVariables';
 import Link from 'next/link';
@@ -15,13 +15,18 @@ import {
 } from './hamburgerMenu.styles';
 import { NavMenu } from '@/app/components/navMenu';
 
-const useOutsideAlerter = (ref, setOpen) => {
+type useOutsideAlerter = {
+  ref: RefObject<HTMLDivElement>;
+  setOpen: (value: boolean) => void;
+};
+
+const useOutsideAlerter = (ref: RefObject<HTMLDivElement>, setOpen: (value: boolean) => void) => {
   useEffect(() => {
     /**
      * Alert if clicked on outside of element
      */
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
+    function handleClickOutside(event: MouseEvent) {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
         setOpen(false);
       }
     }
@@ -31,7 +36,7 @@ const useOutsideAlerter = (ref, setOpen) => {
       // Unbind the event listener on clean up
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [ref]);
+  }, [ref, setOpen]);
 };
 
 export const HamburgerMenu = () => {

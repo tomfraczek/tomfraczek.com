@@ -10,6 +10,10 @@
         "build": "build",
         "host": "host",
         "maintain": "maintain"
+      },
+      "cta": {
+        "contact": "Contact Us",
+        "check_offer": "Check the Offer"
       }
     }
   }

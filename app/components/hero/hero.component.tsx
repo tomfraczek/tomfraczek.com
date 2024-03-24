@@ -3,9 +3,12 @@ import Image from 'next/image';
 import HeroImage from '@/public/img/heroImage.png';
 import { useTranslations } from 'next-intl';
 import { WordCarousel } from '../wordCarousel/wordCarousel.component';
+import { isMobile } from '@/theme/media';
 
 export const Hero = () => {
   const t = useTranslations('Home.Hero');
+  // const mobile = isMobile();
+
   const words = [
     { text: t('word_carousel.grow') },
     { text: t('word_carousel.build') },
@@ -13,7 +16,7 @@ export const Hero = () => {
     { text: t('word_carousel.maintain') },
   ];
   return (
-    <section className='mx-auto px-12 lg:max-w-720 xl:max-w-1385 2xl:max-w-screen-2xl'>
+    <section className='mx-auto px-3 mt-40 lg:max-w-[720px] xl:max-w-[1385px]' data-aos={'fade-right'}>
       <div className='flex flex-row items-center mt-150 justify-between'>
         <div className='flex flex-col w-full md:w-3/5'>
           <h1 className='text-6xl mb-27 font-bold flex flex-col text-darkBlue mb-10'>

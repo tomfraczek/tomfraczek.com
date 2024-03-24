@@ -1,16 +1,16 @@
-import styled from "styled-components";
-import {lightBlue, logoRed} from '@/theme/color'
+import styled from 'styled-components';
+import { colors } from '@/theme/color';
 
 const getWindowWidth = () => window.innerWidth;
 
 export const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
-  laptop: "1024px",
-  laptopL: "1440px",
-  desktop: "2560px",
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px',
 };
 
 export const device = {
@@ -31,18 +31,21 @@ export const isMobile = () => {
 
 export const isTablet = () => {
   const width = getWindowWidth();
-  return width >= size.tablet && width < size.desktop;
+  const tabletWidth = parseInt(size.tablet, 10);
+  const desktopWidth = parseInt(size.desktop, 10);
+  return width >= tabletWidth && width < desktopWidth;
 };
 
 export const isDesktop = () => {
   const width = getWindowWidth();
-  return width >= size.desktop;
+  const desktopWidth = parseInt(size.desktop, 10);
+  return width >= desktopWidth;
 };
 
 export const HighlightBlue = styled.span`
-  color: ${lightBlue};
+  color: ${colors.lightBlue};
 `;
 
 export const HighlightRed = styled.span`
-  color: ${logoRed};
+  color: ${colors.logoRed};
 `;
