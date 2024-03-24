@@ -1,4 +1,5 @@
 import { Roboto } from 'next/font/google';
+import { Header } from '@/app/components/header';
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -14,7 +15,10 @@ export default function LocaleLayout({
 }) {
   return (
     <html lang={locale}>
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
